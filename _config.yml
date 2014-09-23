@@ -1,0 +1,12 @@
+# Site settings
+title: Численные методы
+email: your-email@domain.com
+description: ""
+baseurl: "/numeric-methods"
+url: "http://vstu-physics.github.io"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+permalink: pretty
