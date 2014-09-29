@@ -106,7 +106,7 @@ $$
 
 $$
     l_{ij} = \left\{\begin{array}{l}
-                        a_{ij}, \text{если } i < j,\\
+                        a_{ij}, \text{если } i > j,\\
                         1, \text{если } i = j,\\
                         0, \text{иначе}
                     \end{array}\right.,
@@ -114,7 +114,7 @@ $$
 
 $$
     u_{ij} = \left\{\begin{array}{l}
-                        a_{ij}, \text{если } i \geq j,\\
+                        a_{ij}, \text{если } i \leq j,\\
                         0, \text{иначе }
                     \end{array}\right.
 $$
