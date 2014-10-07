@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1>Содержание</h1>
+  <h2>Теория</h2>
 
   <ul class="posts">
     {% for post in site.posts %}
@@ -13,6 +13,12 @@ layout: default
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </li>
     {% endfor %}
+  </ul>
+
+  <h2>Программный код</h2>
+  <ul class="posts">
+      <li><a href="https://github.com/sputnikas/lab1_for_MM_in_PMT">код Сергея (С++)</a></li>
+      <li><a href="https://github.com/citrux/numeric-methods">код Вовы (D)</a></li>
   </ul>
 
 </div>
