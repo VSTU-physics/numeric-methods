@@ -195,10 +195,10 @@ def weights(ys):
 {% highlight python %}
 def integrate_lagrange(f, a, b, n):
     '''
-        Интегрирование по n точкам
+        Интегрирование полиномом Лагранжа степени n
     '''
     # создаём разбиение отрезка [-1, 1]
-    ys = [-1 + 2 * float(i) / (n - 1) for i in range(n)]
+    ys = [-1 + 2 * float(i) / n for i in range(n + 1)]
 
     # считаем веса:
     w = weights(ys)
