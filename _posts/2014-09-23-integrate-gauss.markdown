@@ -66,7 +66,7 @@ $$
 
 $$
     \int\limits_{-1}^1 x^m \cdot w_{n+1}(x) dx = 0,\quad
-    \forall m \in {0, 1, \ldots, n}
+    \forall m \in \{0, 1, \ldots, n\}
 $$
 
 Это равенство означает, что многочлен $$ w_{n+1}(x) $$ _ортогонален_ всем
