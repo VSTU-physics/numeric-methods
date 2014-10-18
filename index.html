@@ -6,19 +6,67 @@ layout: default
 
   <h2>Теория</h2>
 
-  <ul class="posts">
-    {% for post in site.posts %}
+  <ol class="chapters">
       <li>
-        <!-- <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> -->
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post-link" href="">Решение СЛАУ</a>
+        <ol class="sections">
+          <li>
+              <a class="post-link"
+                  href="{{ '/СЛАУ/LUP' | prepend: site.baseurl }}">
+                  LUP-разложение
+              </a>
+          </li>
+        </ol>
       </li>
-    {% endfor %}
-  </ul>
+      <li>
+        <a class="post-link" href="{{ '/интегрирование/обзор' | prepend: site.baseurl }}">Интегрирование</a>
+        <ol class="sections">
+          <li>
+              <a class="post-link"
+                  href="{{ '/интегрирование/интерполирующий_многочлен' | prepend: site.baseurl }}">
+                  Приближение многочленом
+              </a>
+          </li>
+          <li>
+              <a class="post-link"
+                  href="{{ '/интегрирование/многочлен_Лагранжа' | prepend: site.baseurl }}">
+                  Приближение многочленом Лагранжа
+              </a>
+          </li>
+          <li>
+              <a class="post-link" href="{{ '/интегрирование/формулы_Гаусса' | prepend: site.baseurl }}">
+                  Формулы Гаусса
+              </a>
+          </li>
+          <li>
+              <a class="post-link" href="{{ '/интегрирование/адаптивные_методы' | prepend: site.baseurl }}">
+                  Адаптивные методы
+              </a>
+          </li>
+          <li>
+              <a class="post-link" href="/интегрирование/tanh-sinh">
+                  Tanh-Sinh
+              </a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a class="post-link" href="">Решение ОДУ</a>
+      </li>
+      <li>
+        <a class="post-link" href="">Решение ДУЧП</a>
+      </li>
+  </ol>
 
   <h2>Программный код</h2>
-  <ul class="posts">
-      <li><a href="https://github.com/sputnikas/lab1_for_MM_in_PMT">код Сергея (С++)</a></li>
-      <li><a href="https://github.com/citrux/numeric-methods">код Вовы (D)</a></li>
-  </ul>
+  <p>
+  <a href="https://github.com/sputnikas/lab1_for_MM_in_PMT">
+      код Сергея (С++)
+  </a>,
+  <a href="https://github.com/citrux/numeric-methods">
+      код Вовы (D)
+  </a>.
+  </p>
 
 </div>
+<!-- vim:set ts=2; -->

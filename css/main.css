@@ -146,17 +146,27 @@ a:visited { color: #205caa; }
 
 .home h1 { margin-bottom: 15px; }
 
-.posts {
-  list-style-type: none;
+.chapters {
+  list-style-type: upper-roman;
   margin-bottom: 30px;
 }
 
-.posts li {
+.chapters li {
   margin-bottom: 10px;
   margin-left: 30px;
 }
 
-.posts .post-link {
+.sections {
+  list-style-type: lower-greek;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.sections li {
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+.chapters .post-link {
   /* font-size: 15px; */
   /* letter-spacing: -1px; */
   line-height: 1;

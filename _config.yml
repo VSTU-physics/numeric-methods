@@ -7,4 +7,4 @@ github_username:  vstu-physics
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /:categories/:title
