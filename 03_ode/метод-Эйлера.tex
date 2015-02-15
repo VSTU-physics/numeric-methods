@@ -1,0 +1,62 @@
+---
+layout: post
+title: "Численное решение ОДУ: метод Эйлера"
+date:   2014-10-24 22:30:00
+categories: ОДУ
+---
+
+Пожалуй, самый простой метод решения задачи Коши. Пусть у нас имеется задача
+Коши:
+
+$$
+    y' = f(x, y),\ y(x_0) = y_0.
+$$
+
+Накроем числовую прямую сеткой с шагом $$ h $$ и разложим точное решение вблизи
+$$ n $$-го узла:
+
+$$
+    y(x) = y(x_n) + y'(x_n)\cdot(x-x_n) + o(x-x_n).
+$$
+
+Обозначим $$ y(x_n) = y_n $$ и получим формулу
+
+$$
+    y_{n+1} = y_{n} + f(x_n, y_n) \cdot h + o(h)
+    \approx y_n + f(x_n, y_n) \cdot h.
+$$
+
+Это и есть метод Эйлера. Программная реализация может иметь вид:
+
+{% highlight python %}
+import numpy as np
+import matplotlib.pyplot as plt
+
+def euler(f, y0, xs):
+    ys = [y0]
+    for i in range(len(xs) - 1):
+        dx = xs[i + 1] - xs[i]
+        ys.append(ys[i] + dx * f(xs[i], ys[i]))
+    return ys
+
+# Для примера решим парочку простейших уравнений:
+# 1. y' = -y, y(0) = 1
+xs = np.linspace(0, 3, 31)
+ys = euler(lambda x, y: -y, 1, xs)
+plt.subplot(211)
+plt.title("y' = -y")
+plt.plot(xs, ys, "r-", label="метод Эйлера")
+plt.plot(xs, np.exp(-xs), "k-", label="точное решение")
+plt.legend()
+
+# 2. y' = cos x, y(0) = 0
+xs = np.linspace(0, 6.28, 100)
+ys = euler(lambda x, y: np.cos(x), 0, xs)
+plt.subplot(212)
+plt.title("y' = cos x")
+plt.plot(xs, ys, "r-", label="метод Эйлера")
+plt.plot(xs, np.sin(xs), "k-", label="точное решение")
+plt.legend()
+
+plt.show()
+{% endhighlight %}
